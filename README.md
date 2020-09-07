@@ -40,26 +40,26 @@ Data comes from 'kc_house_data.csv' which is a housing dataset from King County 
 ### Methods
 Throughout this linear regression project I used the OSEMN framework to help guide my decisions. 
 1. *Obtain Data*
-* - Checked for duplicates - many homes sold more than one time.
-* - Dropped id column - Not needed for model.
-* - Inspected information about dataset.
+* Checked for duplicates - many homes sold more than one time.
+* Dropped id column - Not needed for model.
+* Inspected information about dataset.
 2. *Scrub* 
-* - Created categorical columns variable
-* - Switched sqft_basement to float
-* - Handled null values - replace ? with 0, fill Nan with 0, drop rows if less than 5% of column.
-* - Checked for abnormal symbols or characters.
+* Created categorical columns variable
+* Switched sqft_basement to float
+* Handled null values - replace ? with 0, fill Nan with 0, drop rows if less than 5% of column.
+* Checked for abnormal symbols or characters.
 3. *Explore* 
-* - Ran initial model - statsmodels is used to fit the data using OLS analysis
-* - One hot encoded categorical columns (zipcode and condition)
-* - Checked for multicollinearity - checked for over .75 multicollinearity and used vif.
-* - Examined outliers - looked at zscore and IQR. Used IQR to removed outliers.
-* - Removed high p-values (greater than .05).
+* Ran initial model - statsmodels is used to fit the data using OLS analysis
+* One hot encoded categorical columns (zipcode and condition)
+* Checked for multicollinearity - checked for over .75 multicollinearity and used vif.
+* Examined outliers - looked at zscore and IQR. Used IQR to removed outliers.
+* Removed high p-values (greater than .05).
 4. *Model* 
-* - Ran log transformation to improve normality
-* - Ran regression model validation using train_test_split
+* Ran log transformation to improve normality
+* Ran regression model validation using train_test_split
 5. *Interpret* 
-* - Discussion of findings.
-* - Recommended improvements: increase number of bedrooms and bathrooms, use high grade material while building, purchase a house that is waterfront, have at least 3 viewings before selling your home, and consider location.
+* Discussion of findings.
+* Recommended improvements: increase number of bedrooms and bathrooms, use high grade material while building, purchase a house that is waterfront, have at least 3 viewings before selling your home, and consider location.
     
     
 **Required Libraries**: pandas, numpy, matplotlib.pyplot, seaborn, statsmodels, interact, scipy.stats, sklearn
@@ -69,14 +69,12 @@ Throughout this linear regression project I used the OSEMN framework to help gui
 
 **Zipcode vs Price of Home**
 
-![alt text]('http://localhost:8888/view/images/Screen%20Shot%202020-09-07%20at%209.42.32%20AM.png')
+![](images/Screen%20Shot%202020-09-07%20at%209.42.32%20AM.png)
 
 Above we can see that the location of the home plays a large role in how much the house sells for. Properity in the north part of the county sell for much more than the south side.
 
 **Grade vs Price**
-![alt_text]('http://localhost:8888/view/images/Screen%20Shot%202020-09-07%20at%2010.42.56%20AM.png')
-
-<img src = 'http://localhost:8888/view/images/Screen%20Shot%202020-09-07%20at%2010.42.56%20AM.png'>
+![](images/Screen%20Shot%202020-09-07%20at%2010.42.56%20AM.png)
 
 As shown in the graph above we can see that the higher the quality of construction materials equals the higher the sale price of the home. 
 
