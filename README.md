@@ -3,6 +3,7 @@
 ### Sell Your Home For More: King County Homes
 
 **Author**: Lauren Esser
+
 *The contents of this repository detail an analysis of the module two project. This analysis is detailed in hopes of making the work accessible and replicable.*
 
 
@@ -13,68 +14,69 @@ Selling a home can be stressful, homeowners ask themselves the question "What ca
 ### Data
 Data comes from 'kc_house_data.csv' which is a housing dataset from King County near Seattle, Washington. The dataset contains 21 different features listed and explained below:
 
-*id* - identification for each home
-*date* - date house was sold
-*price* - is the prediction target
-*bedrooms* - number of bedrooms in the home
-*bathrooms* - number of bathrooms in the home
-*sqft_living* - square footage of the home
-*sqft_lot* - square footage of the lot
-*floors* - total floors or levels in the home
-*waterfront* - if the house has a view of waterfront
-*view* - number of viewings the property received
-*condition* - overall condition of home. 1 = worn out; 5 = excellent
-*grade* - classification by construction quality which refers to the types of materials used and the quality of workmanship. Better quality equals higher grade.
-*sqft_above* - square footage of home apart from basement
-*sqft_basement* - square footage of basement
-*yr_built* - year the home was built
-*yr_renovated* - year the home was renovated
-*zipcode* - zipcode location
-*lat* - latitude coordinate
-*long* - longitude coordinate
-*sqft_living15* - square footage of living space for nearest 15 neighbors
-*sqft_lot15* - square footage of the lot for nearest 15 neighbors.
+>⋅⋅* *id* - identification for each home
+⋅⋅* *date* - date house was sold
+⋅⋅* *price* - is the prediction target
+⋅⋅* *bedrooms* - number of bedrooms in the home
+⋅⋅* *bathrooms* - number of bathrooms in the home
+⋅⋅* *sqft_living* - square footage of the home
+⋅⋅* *sqft_lot* - square footage of the lot
+⋅⋅* *floors* - total floors or levels in the home
+⋅⋅* *waterfront* - if the house has a view of waterfront
+⋅⋅* *view* - number of viewings the property received
+⋅⋅* *condition* - overall condition of home. 1 = worn out; 5 = excellent
+⋅⋅* *grade* - classification by construction quality which refers to the types of materials used and the quality of workmanship. Better quality equals higher grade.
+⋅⋅* *sqft_above* - square footage of home apart from basement
+⋅⋅* *sqft_basement* - square footage of basement
+⋅⋅* *yr_built* - year the home was built
+⋅⋅* *yr_renovated* - year the home was renovated
+⋅⋅* *zipcode* - zipcode location
+⋅⋅* *lat* - latitude coordinate
+⋅⋅* *long* - longitude coordinate
+⋅⋅* *sqft_living15* - square footage of living space for nearest 15 neighbors
+⋅⋅* *sqft_lot15* - square footage of the lot for nearest 15 neighbors.
 
 
 ### Methods
 Throughout this linear regression project I used the OSEMN framework to help guide my decisions. 
-    1. *Obtain Data*
-        - Checked for duplicates - many homes sold more than one time.
-        - Dropped id column - Not needed for model.
-        - Inspected information about dataset.
-    2. *Scrub* 
-        - Created categorical columns variable
-        - Switched sqft_basement to float
-        - Handled null values - replace ? with 0, fill Nan with 0, drop rows if less than 5% of column.
-        - Checked for abnormal symbols or characters.
-    3. *Explore* 
-        - Ran initial model - statsmodels is used to fit the data using OLS analysis
-        - One hot encoded categorical columns (zipcode and condition)
-        - Checked for multicollinearity - checked for over .75 multicollinearity and used vif.
-        - Examined outliers - looked at zscore and IQR. Used IQR to removed outliers.
-        - Removed high p-values (greater than .05).
-    4. *Model* 
-        - Ran log transformation to improve normality
-        - Ran regression model validation using train_test_split
-    5. *Interpret* 
-        - Discussion of findings.
-        - Recommended improvements: increase number of bedrooms and bathrooms, use high grade material while building, purchase a house that is waterfront, have at least 3 viewings before selling your home, and consider location.
+    ⋅⋅1. *Obtain Data*
+        ⋅⋅* - Checked for duplicates - many homes sold more than one time.
+        ⋅⋅* - Dropped id column - Not needed for model.
+        ⋅⋅* - Inspected information about dataset.
+    ⋅⋅2. *Scrub* 
+        ⋅⋅* - Created categorical columns variable
+        ⋅⋅* - Switched sqft_basement to float
+        ⋅⋅* - Handled null values - replace ? with 0, fill Nan with 0, drop rows if less than 5% of column.
+        ⋅⋅* - Checked for abnormal symbols or characters.
+   ⋅⋅3. *Explore* 
+        ⋅⋅* - Ran initial model - statsmodels is used to fit the data using OLS analysis
+        ⋅⋅* - One hot encoded categorical columns (zipcode and condition)
+        ⋅⋅* - Checked for multicollinearity - checked for over .75 multicollinearity and used vif.
+        ⋅⋅* - Examined outliers - looked at zscore and IQR. Used IQR to removed outliers.
+        ⋅⋅* - Removed high p-values (greater than .05).
+    ⋅⋅4. *Model* 
+        ⋅⋅* - Ran log transformation to improve normality
+        ⋅⋅* - Ran regression model validation using train_test_split
+    ⋅⋅5. *Interpret* 
+        ⋅⋅* - Discussion of findings.
+        ⋅⋅* - Recommended improvements: increase number of bedrooms and bathrooms, use high grade material while building, purchase a house that is waterfront, have at least 3 viewings before selling your home, and consider location.
     
     
 **Required Libraries**: pandas, numpy, matplotlib.pyplot, seaborn, statsmodels, interact, scipy.stats, sklearn
 
 
-### Results !!!!!!!!!!
+### Results
+
 **Zipcode vs Price of Home**
-%%html
-<div class='tableauPlaceholder' id='viz1598550849044' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Pricevs_Location&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Pricevs_Location&#47;Sheet2?:language=en&amp;:embed=y&amp;:display_count=y&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Pricevs_Location&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1598550849044');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+![alt text](<div class='tableauPlaceholder' id='viz1598550849044' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Pricevs_Location&#47;Sheet2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Pricevs_Location&#47;Sheet2?:language=en&amp;:embed=y&amp;:display_count=y&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Pricevs_Location&#47;Sheet2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1598550849044');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>)
 
 Above we can see that the location of the home plays a large role in how much the house sells for. Properity in the north part of the county sell for much more than the south side.
 
 **Grade vs Price**
-graph2
+![alt_text](http://localhost:8888/view/images/Screen%20Shot%202020-09-07%20at%2010.42.56%20AM.png)
 
-As shown in the graph above we can see that the higher the quality of construction materials the higher the sale price of the home. 
+As shown in the graph above we can see that the higher the quality of construction materials equals the higher the sale price of the home. 
 
 
 ### Recommendations:
@@ -100,9 +102,9 @@ Here is where you would describe the structure of your repoistory and its conten
 
 
 '''
-├── README.md                       <- README for reviewers of this project.
-├── housing.ipynb             <- narrative documentation of analysis in jupyter notebook
-├── presentation.pdf                <- pdf version of project presentation
+⋅⋅* README.md                       <- README for reviewers of this project.
+⋅⋅* housing.ipynb             <- narrative documentation of analysis in jupyter notebook
+⋅⋅* presentation.pdf                <- pdf version of project presentation
 '''
  
  
