@@ -71,7 +71,7 @@ Below we can see that the location of the home plays a large role in how much th
 
 **Zipcode vs Price of Home**
 
-![](images/Screen%20Shot%202020-09-07%20at%209.42.32%20AM.png)
+![](images/Screen%20Shot%202020-09-08%20at%206.35.43%20PM.png)
 
 The first model was created using OLS analysis through statsmodels.formula.api. Seen below, we began with an R-squared of .809. Although this number appears high, when we look at our QQ-plot we can see there are extreme outliers than need to be taken care of.
 
@@ -125,7 +125,7 @@ For any additional questions, please contact **CLEsser02@gmail.com**)
 ### Repository Structure:
 
 * README.md                       <- README for reviewers of this project.
-* housing.ipynb             <- narrative documentation of analysis in jupyter notebook
+* housing_final.ipynb             <- narrative documentation of analysis in jupyter notebook
 * presentation.pdf                <- pdf version of project presentation
 
  
