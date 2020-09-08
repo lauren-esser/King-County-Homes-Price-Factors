@@ -120,17 +120,14 @@ Given the opportunity with this project I would love to see the impact school di
 ### For further information
 Please review the jupyter notebook or presentation for more information.
 
-For any additional questions, please contact **CLEsser02@gmail.com)
+For any additional questions, please contact **CLEsser02@gmail.com**)
 
 ### Repository Structure:
-Here is where you would describe the structure of your repoistory and its contents, for exampe:
 
-
-'''
 * README.md                       <- README for reviewers of this project.
 * housing.ipynb             <- narrative documentation of analysis in jupyter notebook
 * presentation.pdf                <- pdf version of project presentation
-'''
+
  
  
 
