@@ -67,32 +67,48 @@ Throughout this linear regression project I used the OSEMN framework to help gui
 
 ### Results
 
+Below we can see that the location of the home plays a large role in how much the house sells for. Properity in the north part of the county sell for much more than the south side.
+
 **Zipcode vs Price of Home**
 
 ![](images/Screen%20Shot%202020-09-07%20at%209.42.32%20AM.png)
 
-Above we can see that the location of the home plays a large role in how much the house sells for. Properity in the north part of the county sell for much more than the south side.
+The first model was created using OLS analysis through statsmodels.formula.api. Seen below, we began with an R-squared of .809. Although this number appears high, when we look at our QQ-plot we can see there are extreme outliers than need to be taken care of.
 
+**First OLS Model**
+![](images/first%20model%20OLS.png)
+![](images/first%20model%20QQ.png)
 
-**Final OLS Results**
+Throughout the jupyter notebook tried to improve the OLS analysis and QQPlot by removing outliers, checking for multicollinearity, and performing log transformation. Pictured below is the final OLS Analysis of the King County Housing Data. The R-squared value ended at .792 and a QQPlot with light tails. 
+
+**Final OLS Model**
 ![](images/Final%20OLS.png)
 ![](images/Final%20QQ.png)
 
-Seen above are the final OLS Analysis of the King County Housing Data. The R-squared value ended at .792 and a QQPlot with light tails.
+
 
 
 ### Recommendations:
 Based on found regression model stakeholders should:
 1. Increase the number of bedrooms and bathrooms in the home
+
 ![](images/Bedrooms.png)
 ![](images/Bathrooms.png)
+
 2. Use high grade material while building
+
 ![](images/Grade.png)
+
 3. Purchase a house that is waterfront
+
 ![](images/Waterfront.png)
+
 4. Have at least 3 viewings before selling the home
+
 ![](images/View.png)
+
 5. Consider location.
+
 ![](images/location.png)
 
 ### Limitations & Next Steps
