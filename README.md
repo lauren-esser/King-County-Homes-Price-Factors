@@ -73,23 +73,30 @@ Throughout this linear regression project I used the OSEMN framework to help gui
 
 Above we can see that the location of the home plays a large role in how much the house sells for. Properity in the north part of the county sell for much more than the south side.
 
-**Grade vs Price**
-![](images/Screen%20Shot%202020-09-07%20at%2010.42.56%20AM.png)
 
-As shown in the graph above we can see that the higher the quality of construction materials equals the higher the sale price of the home. 
+**Final OLS Results**
+![](images/Final%20OLS.png)
+![](images/Final%20QQ.png)
+
+Seen above are the final OLS Analysis of the King County Housing Data. The R-squared value ended at .792 and a QQPlot with light tails.
 
 
 ### Recommendations:
 Based on found regression model stakeholders should:
 1. Increase the number of bedrooms and bathrooms in the home
+![](images/Bedrooms.png)
+![](images/Bathrooms.png)
 2. Use high grade material while building
+![](images/Grade.png)
 3. Purchase a house that is waterfront
+![](images/Waterfront.png)
 4. Have at least 3 viewings before selling the home
+![](images/View.png)
 5. Consider location.
-
+![](images/location.png)
 
 ### Limitations & Next Steps
-Given the opportunity with this project I would love to see the impact school districts, walkability, and convinence (distance from grocery stores and gym) have on the selling price of a home. 
+Given the opportunity with this project I would love to see the impact school districts, walkability, type of home, and time of year the house was sold have on the selling price of a home. 
 
 
 ### For further information
